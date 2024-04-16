@@ -6,8 +6,10 @@ class FrostedContainer extends StatelessWidget {
   final double height;
   final double width;
   final String title;
+  final String title2;
+  
   const FrostedContainer(
-      {super.key, required this.height, required this.width, required this.title});
+      {super.key, required this.height, required this.width, required this.title, required this.title2});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +23,14 @@ class FrostedContainer extends StatelessWidget {
               child: Container(
                 height: height,
                 width: width,
-                child: Center(child: Text(title, style: TextStyle(fontWeight: FontWeight.bold),)),
+                child: Center(child: Column(
+                  
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(title, style: TextStyle(fontWeight: FontWeight.bold ,fontSize: 20),),
+                    Text(title2, style: TextStyle(fontWeight: FontWeight.bold ,fontSize: 15),),
+                  ],
+                )),
               ),
             ),
             Container(

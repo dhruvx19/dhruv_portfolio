@@ -52,11 +52,11 @@ class HomePage extends StatelessWidget {
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  FrostedContainer(height: 366, width: 247, title: 'Hello Welcome',),
+                  FrostedContainer(height: 366, width: 247, title: 'Dhruv Balchandani', title2: 'Flutter Developer',),
                   SizedBox(
-                    height: 10,
+                    height: 20,
                   ),
-                  FrostedContainer(height: 177, width: 247, title: 'Under Development',),
+                  FrostedContainer(height: 177, width: 247, title: '', title2: '',),
                 ],
               ),
               SizedBox(
@@ -73,11 +73,11 @@ class HomePage extends StatelessWidget {
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  FrostedContainer(height: 366, width: 247, title: 'Under Development',),
+                  FrostedContainer(height: 366, width: 247, title: '', title2: '',),
                   SizedBox(
                     height: 20,
                   ),
-                  FrostedContainer(height: 177, width: 247, title: 'Under Development',),
+                  FrostedContainer(height: 177, width: 247, title: '', title2: '“Always code as if the person who ends up maintaining your code will be a violent psychopath who knows where you live.”',),
                 ],
               ),
             ],
