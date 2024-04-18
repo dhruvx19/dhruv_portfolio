@@ -64,7 +64,7 @@ class _ProjectsState extends State<Projects> {
             ],
           ),
           SizedBox(height: 20,),
-          ProjectContainer(heading: 'Chat App', tech: 'Dart, Flutter, Firebase, Android Studio', description: 'Under Development', url: '',),
+          ProjectContainer(heading: 'Chat App', tech: 'Dart, Flutter, Firebase, Android Studio', description: 'I developed an innovative chat app using Flutter and Firebase, featuring Gmail-based authentication for easy access. With Firebase\'s real-time messaging and Firestore cloud storage, users can share photos/videos seamlessly. The app includes read receipts, message editing/deletion, and push notifications for smooth interaction. Users can add contacts by email and manage profiles with photos, bios, and activity statuses, streamlining communication and connectivity.', url: 'https://github.com/dhruvx19/chat_app',),
           SizedBox(
             height: 20,
           ),

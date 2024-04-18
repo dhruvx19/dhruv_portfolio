@@ -25,7 +25,7 @@ List<AppModel> app = [
       color: Colors.white,
       
       icon: FaIcon(FontAwesomeIcons.file),
-      link: 'https://drive.google.com/uc?export=download&id=1C2hNJgcsjsAaMeFTf0-z-FO5ExNlbrRi'),
+      link: 'https://drive.google.com/uc?export=download&id=1hhVqhVjEGSD5mZSwC1npPhVFS4RqVFi5'),
   AppModel(
       title: 'LinkedIn',
       color: Colors.white,
