@@ -41,14 +41,17 @@ class Skill extends StatelessWidget {
           child: Container(
             padding: EdgeInsets.all(10),
             decoration: BoxDecoration(color: Colors.grey.shade200),
-            child: Column(
-              children: [
-                SizedBox(
-                  height: 50,
-                  width: 50,
-                  child: Icon(Bootstrap.airplane),
-                )
-              ],
+            child: Padding(
+              padding: const EdgeInsets.all(28.0),
+              child: Column(
+                
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(color: Colors.white,child: Image.asset('assets/images/download.png')),
+                  Container(color: Colors.white,child: Image.asset('assets/images/firebase.png')),
+                  
+                ],
+              ),
             ),
           ),
       ),
