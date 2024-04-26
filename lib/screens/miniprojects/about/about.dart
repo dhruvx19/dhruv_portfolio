@@ -46,7 +46,7 @@ class About extends StatelessWidget {
                   backgroundImage: AssetImage('assets/images/dhruv.png'),
                 ),
                 Text(
-                  'My name is Dhruv Balchandani. I was born and brought up in the holy city of Varanasi. I am currently staying in Ghaziabad and pursuing a bachelor of technology specialising in information technology from the KET Group of Institutions in Ghaziabad I developed an interest in crafting applications in Flutter through my active participation in technical clubs and events, which gave me insights into the language.Currently, I am building a robust portfolio application to showcase my technical skills.I love learning new technologies and am currently exploring NodeJs so as to integrate backends into my apps in the future. I have also maintained a decent GPA in academics.My skills include multitasking, problem-solving, and time management.',
+                  'My name is Dhruv Balchandani. I was born and brought up in the holy city of Varanasi. I am currently staying in Ghaziabad and pursuing a bachelor of technology specialising in information technology from the KET Group of Institutions in Ghaziabad I developed an interest in crafting applications in Flutter through my active participation in technical clubs and events, which gave me insights into the language.Currently, I am building a robust Chat application to showcase my technical skills.I love learning new technologies and am currently exploring NodeJs so as to integrate backends into my apps in the future.My skills include multitasking, problem-solving, and time management.',
                   style: TextStyle(fontSize: 22),
                 ),
                 Text(introduction),

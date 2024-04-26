@@ -33,29 +33,100 @@ class Skill extends StatelessWidget {
           ),
         ],
       ),
-      
-      backgroundColor: Colors.white,
       body: SingleChildScrollView(
-        child: Container(
-          margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        child: Center(
+          
           child: Container(
-            padding: EdgeInsets.all(10),
-            decoration: BoxDecoration(color: Colors.grey.shade200),
-            child: Padding(
-              padding: const EdgeInsets.all(28.0),
-              child: Column(
-                
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(color: Colors.white,child: Image.asset('assets/images/download.png')),
-                  Container(color: Colors.white,child: Image.asset('assets/images/firebase.png')),
-                  
-                ],
-              ),
+            padding: const EdgeInsets.all(35),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Wrap(
+                  alignment: WrapAlignment.center,
+                  children: [
+                    ...List.generate(
+                      skills.length,
+                      (index) => Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 8, vertical: 5),
+                        margin: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
+                            color: const Color(0xffeff0e0),
+                            border: Border.all(color: skills[index].colorS)),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              skills[index].skillName,
+                              style: TextStyle(fontSize:14 , fontWeight: FontWeight.w500)
+                            ),
+                            // skills[index].iconPath != null
+                            //     ? Padding(
+                            //         padding: const EdgeInsets.only(left: 10),
+                            //         child: SvgPicture.asset(
+                            //           "assets/icons/flutter.svg",
+                            //           height: 20,
+                            //         ))
+                            //     : Container()
+                          ],
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                const Divider(
+                  color: Colors.grey,
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Text(
+                  "Languages",
+                  style: TextStyle(fontSize:25, fontWeight: FontWeight.bold )
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Wrap(
+                  alignment: WrapAlignment.center,
+                  children: [
+                    ...List.generate(
+                      languages.length,
+                      (index) => Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 8, vertical: 5),
+                        margin: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(6),
+                            color: const Color(0xffeff0e0),
+                            border: Border.all(color: languages[index].colorS)),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              languages[index].skillName,
+                              style: TextStyle(fontSize:14 ),
+                            ),
+                            languages[index].iconPath != null
+                                ? const Icon(Icons.flutter_dash)
+                                : Container()
+                          ],
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ],
             ),
           ),
+        ),
       ),
-    ),
     );
   }
 }
+  
+

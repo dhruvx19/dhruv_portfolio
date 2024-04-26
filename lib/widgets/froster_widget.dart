@@ -3,13 +3,19 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class FrostedContainer extends StatelessWidget {
+  final Widget childW;
   final double height;
   final double width;
-  final String title;
-  final String title2;
   
-  const FrostedContainer(
-      {super.key, required this.height, required this.width, required this.title, required this.title2});
+  final void Function()? onPressed;
+
+  const FrostedContainer({
+    super.key,
+    this.height = 150,
+    this.width = 200,
+    required this.childW,
+    this.onPressed,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,31 +26,30 @@ class FrostedContainer extends StatelessWidget {
           children: [
             BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 7, sigmaY: 7),
-              child: Container(
+              child: SizedBox(
                 height: height,
                 width: width,
-                child: Center(child: Column(
-                  
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(title, style: TextStyle(fontWeight: FontWeight.bold ,fontSize: 20),),
-                    Text(title2, style: TextStyle(fontWeight: FontWeight.bold ,fontSize: 15),),
-                  ],
-                )),
+                child: Container(
+                    height: height,
+                    width: width,
+                    decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.25),
+                          )
+                        ],
+                        gradient: LinearGradient(
+                          colors: [
+                            Colors.white.withOpacity(0.5),
+                            Colors.white.withOpacity(0.2)
+                          ],
+                          stops: const [0.0, 1.0],
+                        ),
+                        borderRadius: BorderRadius.circular(20)),
+                    child: childW,
+                  ),
               ),
-            ),
-            Container(
-              height: height,
-              width: width,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [
-                    Colors.white.withOpacity(0.5),
-                    Colors.white.withOpacity(0.3)
-                  ],
-                ),
-              ),
-            ),
+            )
           ],
         ),
       ),
