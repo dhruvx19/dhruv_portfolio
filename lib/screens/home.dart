@@ -66,14 +66,11 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    ThemeProvider theme = Provider.of<ThemeProvider>(context, listen: false);
 
     CurrentState currentState =
         Provider.of<CurrentState>(context, listen: false);
     Size size = MediaQuery.of(context).size;
-    theme.size = MediaQuery.of(context).size;
-    theme.widthRatio = theme.size.width / baseWidth;
-    theme.heightRatio = theme.size.height / baseHeight;
+    
     bool phone = false;
     return Scaffold(
       body: Stack(children: [
